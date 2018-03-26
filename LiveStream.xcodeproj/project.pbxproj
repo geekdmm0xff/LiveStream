@@ -18,6 +18,8 @@
 		E343B11C2068D571004428B1 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E343B11B2068D571004428B1 /* Discover.storyboard */; };
 		E343B11E2068D57B004428B1 /* Rank.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E343B11D2068D57B004428B1 /* Rank.storyboard */; };
 		E343B1202068D585004428B1 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E343B11F2068D585004428B1 /* Home.storyboard */; };
+		E343B1252068E049004428B1 /* HomeNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E343B1242068E049004428B1 /* HomeNavViewController.swift */; };
+		E343B1272068E068004428B1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E343B1262068E068004428B1 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		E343B11B2068D571004428B1 /* Discover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		E343B11D2068D57B004428B1 /* Rank.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rank.storyboard; sourceTree = "<group>"; };
 		E343B11F2068D585004428B1 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		E343B1242068E049004428B1 /* HomeNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavViewController.swift; sourceTree = "<group>"; };
+		E343B1262068E068004428B1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,7 @@
 		E343B1122068D2DD004428B1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E343B1212068DFA5004428B1 /* Controller */,
 				E343B11F2068D585004428B1 /* Home.storyboard */,
 			);
 			path = Home;
@@ -189,6 +194,15 @@
 			isa = PBXGroup;
 			children = (
 				E343B1172068D37D004428B1 /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E343B1212068DFA5004428B1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E343B1242068E049004428B1 /* HomeNavViewController.swift */,
+				E343B1262068E068004428B1 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -332,7 +346,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E343B0E32068D0D4004428B1 /* AppDelegate.swift in Sources */,
+				E343B1252068E049004428B1 /* HomeNavViewController.swift in Sources */,
 				E343B1182068D37D004428B1 /* MainViewController.swift in Sources */,
+				E343B1272068E068004428B1 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

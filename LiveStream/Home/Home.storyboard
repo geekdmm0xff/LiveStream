@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="ach-uG-yd2">
             <objects>
-                <viewController id="Brw-8c-MpC" sceneMemberID="viewController">
+                <viewController id="Brw-8c-MpC" customClass="HomeViewController" customModule="LiveStream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BAl-fP-UyF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
         <!--直播-->
         <scene sceneID="UfN-BX-gRH">
             <objects>
-                <navigationController title="直播" automaticallyAdjustsScrollViewInsets="NO" id="ZM9-RG-pjJ" sceneMemberID="viewController">
+                <navigationController title="直播" automaticallyAdjustsScrollViewInsets="NO" id="ZM9-RG-pjJ" customClass="HomeNavViewController" customModule="LiveStream" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="直播" image="live-n" selectedImage="live-p" id="APZ-8u-fct"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
