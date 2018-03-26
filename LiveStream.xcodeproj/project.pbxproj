@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		E343B0E32068D0D4004428B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E343B0E22068D0D4004428B1 /* AppDelegate.swift */; };
-		E343B0E52068D0D4004428B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E343B0E42068D0D4004428B1 /* ViewController.swift */; };
 		E343B0E82068D0D4004428B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E343B0E62068D0D4004428B1 /* Main.storyboard */; };
 		E343B0EA2068D0D4004428B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E343B0E92068D0D4004428B1 /* Assets.xcassets */; };
 		E343B0ED2068D0D4004428B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E343B0EB2068D0D4004428B1 /* LaunchScreen.storyboard */; };
 		E343B0F82068D0D5004428B1 /* LiveStreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E343B0F72068D0D5004428B1 /* LiveStreamTests.swift */; };
 		E343B1032068D0D5004428B1 /* LiveStreamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E343B1022068D0D5004428B1 /* LiveStreamUITests.swift */; };
+		E343B1182068D37D004428B1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E343B1172068D37D004428B1 /* MainViewController.swift */; };
+		E343B11A2068D568004428B1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E343B1192068D568004428B1 /* Profile.storyboard */; };
+		E343B11C2068D571004428B1 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E343B11B2068D571004428B1 /* Discover.storyboard */; };
+		E343B11E2068D57B004428B1 /* Rank.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E343B11D2068D57B004428B1 /* Rank.storyboard */; };
+		E343B1202068D585004428B1 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E343B11F2068D585004428B1 /* Home.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		E343B0DF2068D0D4004428B1 /* LiveStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E343B0E22068D0D4004428B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E343B0E42068D0D4004428B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E343B0E72068D0D4004428B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E343B0E92068D0D4004428B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E343B0EC2068D0D4004428B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		E343B0FE2068D0D5004428B1 /* LiveStreamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveStreamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E343B1022068D0D5004428B1 /* LiveStreamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamUITests.swift; sourceTree = "<group>"; };
 		E343B1042068D0D5004428B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E343B1172068D37D004428B1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E343B1192068D568004428B1 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		E343B11B2068D571004428B1 /* Discover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		E343B11D2068D57B004428B1 /* Rank.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rank.storyboard; sourceTree = "<group>"; };
+		E343B11F2068D585004428B1 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +105,13 @@
 		E343B0E12068D0D4004428B1 /* LiveStream */ = {
 			isa = PBXGroup;
 			children = (
+				E343B1102068D2CC004428B1 /* Base */,
+				E343B1112068D2D5004428B1 /* Main */,
+				E343B1152068D2ED004428B1 /* Profile */,
+				E343B1142068D2E6004428B1 /* Discover */,
+				E343B1132068D2E0004428B1 /* Rank */,
+				E343B1122068D2DD004428B1 /* Home */,
 				E343B0E22068D0D4004428B1 /* AppDelegate.swift */,
-				E343B0E42068D0D4004428B1 /* ViewController.swift */,
 				E343B0E62068D0D4004428B1 /* Main.storyboard */,
 				E343B0E92068D0D4004428B1 /* Assets.xcassets */,
 				E343B0EB2068D0D4004428B1 /* LaunchScreen.storyboard */,
@@ -123,6 +136,61 @@
 				E343B1042068D0D5004428B1 /* Info.plist */,
 			);
 			path = LiveStreamUITests;
+			sourceTree = "<group>";
+		};
+		E343B1102068D2CC004428B1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E343B1112068D2D5004428B1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E343B1162068D360004428B1 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E343B1122068D2DD004428B1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E343B11F2068D585004428B1 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E343B1132068D2E0004428B1 /* Rank */ = {
+			isa = PBXGroup;
+			children = (
+				E343B11D2068D57B004428B1 /* Rank.storyboard */,
+			);
+			path = Rank;
+			sourceTree = "<group>";
+		};
+		E343B1142068D2E6004428B1 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				E343B11B2068D571004428B1 /* Discover.storyboard */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		E343B1152068D2ED004428B1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E343B1192068D568004428B1 /* Profile.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E343B1162068D360004428B1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E343B1172068D37D004428B1 /* MainViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +300,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E343B1202068D585004428B1 /* Home.storyboard in Resources */,
+				E343B11E2068D57B004428B1 /* Rank.storyboard in Resources */,
 				E343B0ED2068D0D4004428B1 /* LaunchScreen.storyboard in Resources */,
 				E343B0EA2068D0D4004428B1 /* Assets.xcassets in Resources */,
+				E343B11C2068D571004428B1 /* Discover.storyboard in Resources */,
+				E343B11A2068D568004428B1 /* Profile.storyboard in Resources */,
 				E343B0E82068D0D4004428B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +331,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E343B0E52068D0D4004428B1 /* ViewController.swift in Sources */,
 				E343B0E32068D0D4004428B1 /* AppDelegate.swift in Sources */,
+				E343B1182068D37D004428B1 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LiveStream/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.geek.dmm.LiveStream;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -442,6 +515,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LiveStream/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.geek.dmm.LiveStream;
 				PRODUCT_NAME = "$(TARGET_NAME)";

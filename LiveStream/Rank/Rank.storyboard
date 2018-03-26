@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pan-ta-wQr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="k0g-2x-iWy">
+            <objects>
+                <viewController id="o0f-qe-hHf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RRh-p9-wI1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5Ve-R1-edK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OiH-E4-I1f"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ffF-Ld-Tno" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="536.79999999999995" y="141.67916041979012"/>
+        </scene>
+        <!--排行-->
+        <scene sceneID="vjA-Py-2FP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pan-ta-wQr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="排行" image="ranking-n" selectedImage="ranking-p" id="ukS-bJ-jSZ"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J39-r6-BAD">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="o0f-qe-hHf" kind="relationship" relationship="rootViewController" id="Z9L-Vo-spB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M6T-6n-ff2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-241" y="136"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ranking-n" width="25" height="19"/>
+        <image name="ranking-p" width="25" height="19"/>
+    </resources>
+</document>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v1p-N7-Do8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="dii-Xb-tfj">
+            <objects>
+                <viewController id="dhh-FP-G2t" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2qW-sI-XF4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="beg-1Q-Tth"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1z5-rS-bPI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qDi-B3-Esu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="389.95502248875567"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="A7E-Hk-cJV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v1p-N7-Do8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="mine-n" selectedImage="mine-p" id="qAE-Sv-1qF"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OcP-dj-2nA">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dhh-FP-G2t" kind="relationship" relationship="rootViewController" id="MWv-jI-sMm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J2i-pl-PRe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-463" y="390"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mine-n" width="25" height="19"/>
+        <image name="mine-p" width="25" height="19"/>
+    </resources>
+</document>
