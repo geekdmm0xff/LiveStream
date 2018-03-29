@@ -17,10 +17,51 @@
                     <view key="view" contentMode="scaleToFill" id="BAl-fP-UyF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="16m-av-KM7" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="bqg-7G-3hu"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tmc-cE-DwM">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8VA-Nf-nF8">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bb2-sY-eh0">
+                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bb2-sY-eh0" firstAttribute="top" secondItem="16m-av-KM7" secondAttribute="bottom" id="1bC-2A-Sd1"/>
+                            <constraint firstItem="16m-av-KM7" firstAttribute="leading" secondItem="GVy-WJ-ckU" secondAttribute="leading" id="6ld-qw-j4h"/>
+                            <constraint firstItem="16m-av-KM7" firstAttribute="top" secondItem="GVy-WJ-ckU" secondAttribute="top" id="SVj-Cz-Rk2"/>
+                            <constraint firstItem="bb2-sY-eh0" firstAttribute="leading" secondItem="GVy-WJ-ckU" secondAttribute="leading" id="Uef-uQ-Yuq"/>
+                            <constraint firstItem="GVy-WJ-ckU" firstAttribute="trailing" secondItem="bb2-sY-eh0" secondAttribute="trailing" id="g2G-Ln-pkZ"/>
+                            <constraint firstItem="GVy-WJ-ckU" firstAttribute="trailing" secondItem="16m-av-KM7" secondAttribute="trailing" id="oiq-qA-LMX"/>
+                            <constraint firstItem="GVy-WJ-ckU" firstAttribute="bottom" secondItem="bb2-sY-eh0" secondAttribute="bottom" id="qNe-pj-Xve"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GVy-WJ-ckU"/>
                     </view>
                     <navigationItem key="navigationItem" id="eW7-Fh-fuf"/>
+                    <connections>
+                        <outlet property="buttonBarView" destination="16m-av-KM7" id="Kvw-yb-3pe"/>
+                        <outlet property="containerView" destination="bb2-sY-eh0" id="Qwa-OS-0JY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zqh-3z-8lO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
