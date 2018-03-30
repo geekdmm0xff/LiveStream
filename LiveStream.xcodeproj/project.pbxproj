@@ -25,6 +25,7 @@
 		D5458E4B858290EF51F7A3FCF83AB9BE /* LiveStreamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE95CC1719038F519A21086021B5071 /* LiveStreamUITests.swift */; };
 		E3612237206C8F710050B248 /* HomeChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3612236206C8F710050B248 /* HomeChildViewController.xib */; };
 		E361223A206CBC450050B248 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3612239206CBC450050B248 /* UICollectionView+Extension.swift */; };
+		E361223D206CCB380050B248 /* HomeWaterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E361223C206CCB380050B248 /* HomeWaterFlowLayout.swift */; };
 		EF24515AE2496667DE2A8B15A179AF67 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F81DDDC2710E630C7D5F2D5E360DBEC7 /* Discover.storyboard */; };
 		F333BDB60A00BF1BB02F0FEDD0D0CE57 /* HomeChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C9E3CB28A64B5C632348D2464D0D58 /* HomeChildViewController.swift */; };
 		F525F454D9AD3868B136A09A27160D38 /* Pods_LiveStream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE302F2DAAF9FE914455024067927B62 /* Pods_LiveStream.framework */; };
@@ -75,6 +76,7 @@
 		D554A25085532E57F239734142E03604 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3612236206C8F710050B248 /* HomeChildViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeChildViewController.xib; sourceTree = "<group>"; };
 		E3612239206CBC450050B248 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		E361223C206CCB380050B248 /* HomeWaterFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWaterFlowLayout.swift; sourceTree = "<group>"; };
 		EFE95CC1719038F519A21086021B5071 /* LiveStreamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamUITests.swift; sourceTree = "<group>"; };
 		F29D28B998B90EDD3470DA88A03DBE74 /* LiveStreamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamTests.swift; sourceTree = "<group>"; };
 		F79BA2277208E24122301C82A758D846 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 		5CBC78F82DCBE24DF509B77D105F9D7D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E361223B206CCB080050B248 /* Layout */,
 				190D0AF3B8427BEF55E2BE8184E5EF17 /* Controller */,
 				4EBC9D7A30945844E1E445095C81DA68 /* Home.storyboard */,
 			);
@@ -260,6 +263,14 @@
 			children = (
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		E361223B206CCB080050B248 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				E361223C206CCB380050B248 /* HomeWaterFlowLayout.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		EC315681CB2E0A0B68D4AD46B23EB2CB /* Discover */ = {
@@ -584,6 +595,7 @@
 				B4451FA51046CAECAEDC1F8C80F518B1 /* MainViewController.swift in Sources */,
 				B3D48BB56FC27B742EE2202114A4A28A /* UIColor+Extension.swift in Sources */,
 				1392C6D64B79603F887FF67CCD4D460F /* UITableView+Extension.swift in Sources */,
+				E361223D206CCB380050B248 /* HomeWaterFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

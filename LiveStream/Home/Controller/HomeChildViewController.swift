@@ -9,11 +9,13 @@
 import UIKit
 import XLPagerTabStrip
 
-class HomeChildViewController: UIViewController, IndicatorInfoProvider, UITableViewDataSource {
+let kScreenWidth = UIScreen.main.bounds.width
+
+class HomeChildViewController: UIViewController {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     private var item: IndicatorInfo
-    
-    @IBOutlet weak var tableView: UITableView!
     
     init(item: IndicatorInfo) {
         self.item = item
@@ -26,23 +28,51 @@ class HomeChildViewController: UIViewController, IndicatorInfoProvider, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.registerClassOf(UITableViewCell.self)
+        setupCollectionView()
     }
+}
+
+// MARK:- UITableViewDataSource
+extension HomeChildViewController: UICollectionViewDataSource {
+    
+    private func setupCollectionView() {
+        let layout = HomeWaterFlowLayout()
+        let margin: CGFloat = 10
+        
+        layout.minimumLineSpacing = margin
+        layout.minimumInteritemSpacing = margin
+        layout.sectionInset = UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
+        layout.dataSource = self
+        collectionView.collectionViewLayout = layout
+        collectionView.registerClassOf(UICollectionViewCell.self)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 100
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+        cell.backgroundColor = UIColor.randomColor()
+        return cell
+    }
+}
+
+// MARK:- IndicatorInfoProvider
+extension HomeChildViewController: IndicatorInfoProvider {
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return item
     }
-    
-    // MARK:- UITableViewDataSource
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+}
+
+// MARK:- HomeWaterFlowLayoutDataSource
+extension HomeChildViewController: HomeWaterFlowLayoutDataSource {
+    func numbersOfColumns(_ layout: HomeWaterFlowLayout) -> Int {
+        return 4
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReuableCell()
-        cell.textLabel?.text = "\(indexPath.row)"
-        return cell
+    func heightOfWaterFlow(_ layout: HomeWaterFlowLayout, item: Int) -> CGFloat {
+        return CGFloat(arc4random_uniform(150) + 100)
     }
-    
 }
