@@ -21,7 +21,9 @@ class HomeWaterFlowLayout: UICollectionViewFlowLayout {
     private lazy var cols: Int = {
         return dataSource?.numbersOfColumns(self) ?? 2
     }()
+    
     private lazy var layoutAttrs: [UICollectionViewLayoutAttributes] = [UICollectionViewLayoutAttributes]()
+    
     private lazy var totalHeights: [CGFloat] = Array(repeating: sectionInset.top, count: cols)
 }
 
@@ -57,7 +59,7 @@ extension HomeWaterFlowLayout {
         }
     }
 
-    // 
+    //
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         return layoutAttrs
     }

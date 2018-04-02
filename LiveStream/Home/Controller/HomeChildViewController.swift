@@ -16,9 +16,12 @@ class HomeChildViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var item: IndicatorInfo
+    private var type: HomeItem
+    private lazy var anchors = [HomeFeeds.HomeAnchor]()
     
-    init(item: IndicatorInfo) {
+    init(item: IndicatorInfo, type: HomeItem) {
         self.item = item
+        self.type = type
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -29,6 +32,18 @@ class HomeChildViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        loadData()
+    }
+}
+
+// MARK:- Request
+extension HomeChildViewController {
+    func loadData() {
+        Networking.fetchHomeData(item: type, index: 0) { (feeds) in
+            if feeds.status == 200 {
+                self.anchors = feeds.message.anchors
+            }
+        }
     }
 }
 

@@ -26,6 +26,9 @@
 		E3612237206C8F710050B248 /* HomeChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3612236206C8F710050B248 /* HomeChildViewController.xib */; };
 		E361223A206CBC450050B248 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3612239206CBC450050B248 /* UICollectionView+Extension.swift */; };
 		E361223D206CCB380050B248 /* HomeWaterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E361223C206CCB380050B248 /* HomeWaterFlowLayout.swift */; };
+		E3F41FE02072058F0029F8D5 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F41FDF2072058F0029F8D5 /* HomeModel.swift */; };
+		E3F41FE3207205FA0029F8D5 /* types.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3F41FE2207205FA0029F8D5 /* types.plist */; };
+		E3F41FE620721A2C0029F8D5 /* Netwoking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F41FE520721A2C0029F8D5 /* Netwoking.swift */; };
 		EF24515AE2496667DE2A8B15A179AF67 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F81DDDC2710E630C7D5F2D5E360DBEC7 /* Discover.storyboard */; };
 		F333BDB60A00BF1BB02F0FEDD0D0CE57 /* HomeChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C9E3CB28A64B5C632348D2464D0D58 /* HomeChildViewController.swift */; };
 		F525F454D9AD3868B136A09A27160D38 /* Pods_LiveStream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE302F2DAAF9FE914455024067927B62 /* Pods_LiveStream.framework */; };
@@ -77,6 +80,9 @@
 		E3612236206C8F710050B248 /* HomeChildViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeChildViewController.xib; sourceTree = "<group>"; };
 		E3612239206CBC450050B248 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		E361223C206CCB380050B248 /* HomeWaterFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWaterFlowLayout.swift; sourceTree = "<group>"; };
+		E3F41FDF2072058F0029F8D5 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		E3F41FE2207205FA0029F8D5 /* types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = types.plist; sourceTree = "<group>"; };
+		E3F41FE520721A2C0029F8D5 /* Netwoking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Netwoking.swift; sourceTree = "<group>"; };
 		EFE95CC1719038F519A21086021B5071 /* LiveStreamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamUITests.swift; sourceTree = "<group>"; };
 		F29D28B998B90EDD3470DA88A03DBE74 /* LiveStreamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamTests.swift; sourceTree = "<group>"; };
 		F79BA2277208E24122301C82A758D846 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -167,6 +173,7 @@
 		55AEC32EA02C0E269433E570C5519401 /* LiveStream */ = {
 			isa = PBXGroup;
 			children = (
+				E3F41FE1207205EE0029F8D5 /* Resource */,
 				DC82329A06199D8958038A3F77D51CA5 /* Base */,
 				EC315681CB2E0A0B68D4AD46B23EB2CB /* Discover */,
 				5CBC78F82DCBE24DF509B77D105F9D7D /* Home */,
@@ -203,6 +210,7 @@
 		5CBC78F82DCBE24DF509B77D105F9D7D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E3F41FDE207205810029F8D5 /* Model */,
 				E361223B206CCB080050B248 /* Layout */,
 				190D0AF3B8427BEF55E2BE8184E5EF17 /* Controller */,
 				4EBC9D7A30945844E1E445095C81DA68 /* Home.storyboard */,
@@ -239,6 +247,7 @@
 		9D431D4C0065121D8C6891943BEE36AF /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E3F41FE420721A080029F8D5 /* Network */,
 				87581708E13682AAE82746C32A3CA91A /* Controller */,
 				5A27B65AAD10E1F096B170898F088F3F /* Extension */,
 			);
@@ -271,6 +280,30 @@
 				E361223C206CCB380050B248 /* HomeWaterFlowLayout.swift */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		E3F41FDE207205810029F8D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E3F41FDF2072058F0029F8D5 /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E3F41FE1207205EE0029F8D5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E3F41FE2207205FA0029F8D5 /* types.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		E3F41FE420721A080029F8D5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E3F41FE520721A2C0029F8D5 /* Netwoking.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		EC315681CB2E0A0B68D4AD46B23EB2CB /* Discover */ = {
@@ -407,6 +440,7 @@
 				E3612237206C8F710050B248 /* HomeChildViewController.xib in Resources */,
 				0DDB7F13A607416B4378E844D2948194 /* Assets.xcassets in Resources */,
 				EF24515AE2496667DE2A8B15A179AF67 /* Discover.storyboard in Resources */,
+				E3F41FE3207205FA0029F8D5 /* types.plist in Resources */,
 				2D491FAD4C377BA84F2DCBCC34FEC1B6 /* Home.storyboard in Resources */,
 				0E92307AD2F706ECFB69AC200EE120E2 /* LaunchScreen.storyboard in Resources */,
 				B6F000838D93DEA5CB713C4B2A397111 /* Main.storyboard in Resources */,
@@ -462,10 +496,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LiveStream/Pods-LiveStream-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,6 +633,8 @@
 				B4451FA51046CAECAEDC1F8C80F518B1 /* MainViewController.swift in Sources */,
 				B3D48BB56FC27B742EE2202114A4A28A /* UIColor+Extension.swift in Sources */,
 				1392C6D64B79603F887FF67CCD4D460F /* UITableView+Extension.swift in Sources */,
+				E3F41FE620721A2C0029F8D5 /* Netwoking.swift in Sources */,
+				E3F41FE02072058F0029F8D5 /* HomeModel.swift in Sources */,
 				E361223D206CCB380050B248 /* HomeWaterFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

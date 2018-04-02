@@ -9,8 +9,8 @@
 import UIKit
 import XLPagerTabStrip
 
-
 class HomeViewController: ButtonBarPagerTabStripViewController {
+    private lazy var items: [HomeItem] = self.loadSegments ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,11 +18,9 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        let child1 = HomeChildViewController(item: IndicatorInfo(title: "热门"))
-        let child2 = HomeChildViewController(item: IndicatorInfo(title: "体育"))
-        let child3 = HomeChildViewController(item: IndicatorInfo(title: "娱乐"))
-        let child4 = HomeChildViewController(item: IndicatorInfo(title: "游戏"))
-        return [child1, child2, child3, child4]
+        return items.map {
+            HomeChildViewController(item: IndicatorInfo(title: $0.title), type:$0)
+        }
     }
 }
 
@@ -58,6 +56,16 @@ extension HomeViewController {
         let searchFiled = searchBar.value(forKey: "_searchField") as? UITextField
         searchFiled?.textColor = UIColor.white
         navigationItem.titleView = searchBar
+    }
+    
+    private func loadSegments() -> [HomeItem] {
+        let path = Bundle.main.path(forResource: "types.plist", ofType: nil)
+        let dataArray = NSArray(contentsOfFile: path!) as! [[String: Any]]
+        return dataArray.map {
+            HomeItem(dict: $0)
+            }.sorted {
+                $0.type < $1.type
+        }
     }
 }
 
