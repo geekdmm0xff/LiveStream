@@ -29,6 +29,10 @@
 		E3F41FE02072058F0029F8D5 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F41FDF2072058F0029F8D5 /* HomeModel.swift */; };
 		E3F41FE3207205FA0029F8D5 /* types.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3F41FE2207205FA0029F8D5 /* types.plist */; };
 		E3F41FE620721A2C0029F8D5 /* Netwoking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F41FE520721A2C0029F8D5 /* Netwoking.swift */; };
+		E3F7ADAD20730FA300CBCACF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7ADAC20730FA300CBCACF /* Config.swift */; };
+		E3F7ADB52073135000CBCACF /* HomeChildCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7ADB32073135000CBCACF /* HomeChildCollectionViewCell.swift */; };
+		E3F7ADB62073135000CBCACF /* HomeChildCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3F7ADB42073135000CBCACF /* HomeChildCollectionViewCell.xib */; };
+		E3F7ADB8207317C600CBCACF /* UImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7ADB7207317C600CBCACF /* UImageView+Extension.swift */; };
 		EF24515AE2496667DE2A8B15A179AF67 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F81DDDC2710E630C7D5F2D5E360DBEC7 /* Discover.storyboard */; };
 		F333BDB60A00BF1BB02F0FEDD0D0CE57 /* HomeChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C9E3CB28A64B5C632348D2464D0D58 /* HomeChildViewController.swift */; };
 		F525F454D9AD3868B136A09A27160D38 /* Pods_LiveStream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE302F2DAAF9FE914455024067927B62 /* Pods_LiveStream.framework */; };
@@ -83,6 +87,10 @@
 		E3F41FDF2072058F0029F8D5 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		E3F41FE2207205FA0029F8D5 /* types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = types.plist; sourceTree = "<group>"; };
 		E3F41FE520721A2C0029F8D5 /* Netwoking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Netwoking.swift; sourceTree = "<group>"; };
+		E3F7ADAC20730FA300CBCACF /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		E3F7ADB32073135000CBCACF /* HomeChildCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChildCollectionViewCell.swift; sourceTree = "<group>"; };
+		E3F7ADB42073135000CBCACF /* HomeChildCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeChildCollectionViewCell.xib; sourceTree = "<group>"; };
+		E3F7ADB7207317C600CBCACF /* UImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UImageView+Extension.swift"; sourceTree = "<group>"; };
 		EFE95CC1719038F519A21086021B5071 /* LiveStreamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamUITests.swift; sourceTree = "<group>"; };
 		F29D28B998B90EDD3470DA88A03DBE74 /* LiveStreamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamTests.swift; sourceTree = "<group>"; };
 		F79BA2277208E24122301C82A758D846 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -203,6 +211,7 @@
 				9D6AC5B2FF6D3CBE62AAE1DB5B40CB72 /* UIColor+Extension.swift */,
 				583069DF986DB9D0B0C2EA350FEE29D8 /* UITableView+Extension.swift */,
 				E3612239206CBC450050B248 /* UICollectionView+Extension.swift */,
+				E3F7ADB7207317C600CBCACF /* UImageView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -210,6 +219,7 @@
 		5CBC78F82DCBE24DF509B77D105F9D7D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E3F7ADAE207312FF00CBCACF /* View */,
 				E3F41FDE207205810029F8D5 /* Model */,
 				E361223B206CCB080050B248 /* Layout */,
 				190D0AF3B8427BEF55E2BE8184E5EF17 /* Controller */,
@@ -247,6 +257,7 @@
 		9D431D4C0065121D8C6891943BEE36AF /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E3F7ADAB20730F9100CBCACF /* Config */,
 				E3F41FE420721A080029F8D5 /* Network */,
 				87581708E13682AAE82746C32A3CA91A /* Controller */,
 				5A27B65AAD10E1F096B170898F088F3F /* Extension */,
@@ -304,6 +315,23 @@
 				E3F41FE520721A2C0029F8D5 /* Netwoking.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		E3F7ADAB20730F9100CBCACF /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				E3F7ADAC20730FA300CBCACF /* Config.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		E3F7ADAE207312FF00CBCACF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E3F7ADB32073135000CBCACF /* HomeChildCollectionViewCell.swift */,
+				E3F7ADB42073135000CBCACF /* HomeChildCollectionViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		EC315681CB2E0A0B68D4AD46B23EB2CB /* Discover */ = {
@@ -441,6 +469,7 @@
 				0DDB7F13A607416B4378E844D2948194 /* Assets.xcassets in Resources */,
 				EF24515AE2496667DE2A8B15A179AF67 /* Discover.storyboard in Resources */,
 				E3F41FE3207205FA0029F8D5 /* types.plist in Resources */,
+				E3F7ADB62073135000CBCACF /* HomeChildCollectionViewCell.xib in Resources */,
 				2D491FAD4C377BA84F2DCBCC34FEC1B6 /* Home.storyboard in Resources */,
 				0E92307AD2F706ECFB69AC200EE120E2 /* LaunchScreen.storyboard in Resources */,
 				B6F000838D93DEA5CB713C4B2A397111 /* Main.storyboard in Resources */,
@@ -497,13 +526,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LiveStream/Pods-LiveStream-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -625,12 +654,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3F7ADB52073135000CBCACF /* HomeChildCollectionViewCell.swift in Sources */,
 				E361223A206CBC450050B248 /* UICollectionView+Extension.swift in Sources */,
 				11AB04BBC4F8B445DF890E2FF47A8A19 /* AppDelegate.swift in Sources */,
 				F333BDB60A00BF1BB02F0FEDD0D0CE57 /* HomeChildViewController.swift in Sources */,
 				48BAA50CAED5EA66DF603AF2DA631971 /* HomeNavViewController.swift in Sources */,
 				3C46481901B29A26002E318B71FB9117 /* HomeViewController.swift in Sources */,
+				E3F7ADAD20730FA300CBCACF /* Config.swift in Sources */,
 				B4451FA51046CAECAEDC1F8C80F518B1 /* MainViewController.swift in Sources */,
+				E3F7ADB8207317C600CBCACF /* UImageView+Extension.swift in Sources */,
 				B3D48BB56FC27B742EE2202114A4A28A /* UIColor+Extension.swift in Sources */,
 				1392C6D64B79603F887FF67CCD4D460F /* UITableView+Extension.swift in Sources */,
 				E3F41FE620721A2C0029F8D5 /* Netwoking.swift in Sources */,

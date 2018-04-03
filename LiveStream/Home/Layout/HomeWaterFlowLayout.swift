@@ -38,7 +38,7 @@ extension HomeWaterFlowLayout {
         let count = collectionView.numberOfItems(inSection: 0)
         layoutAttrs.reserveCapacity(count)
         
-        let w: CGFloat = (kScreenWidth - sectionInset.left - sectionInset.right - CGFloat(cols - 1) * minimumInteritemSpacing) / CGFloat(cols)
+        let w: CGFloat = (Config.screenWidth - sectionInset.left - sectionInset.right - CGFloat(cols - 1) * minimumInteritemSpacing) / CGFloat(cols)
         
         for row in 0 ..< count {
             let attr = UICollectionViewLayoutAttributes(forCellWith: (IndexPath(item: row, section: 0)))

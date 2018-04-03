@@ -13,10 +13,21 @@ protocol Reusable: class {
     static var reuseIdentifier: String { get }
 }
 
+protocol NibLoadable {
+    static var nibName: String { get }
+}
+
 extension UITableViewCell: Reusable {
     
     static var reuseIdentifier: String {
         return NSStringFromClass(self)
+    }
+}
+
+extension UITableViewCell: NibLoadable {
+    
+    static var nibName: String {
+        return String(describing: self)
     }
 }
 

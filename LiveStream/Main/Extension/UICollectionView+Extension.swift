@@ -15,6 +15,14 @@ extension UICollectionViewCell: Reusable {
     }
 }
 
+extension UICollectionViewCell: NibLoadable {
+    
+    static var nibName: String {
+        return String(describing: self)
+    }
+    
+}
+
 extension UICollectionView {
     
     func registerClassOf<T: UICollectionViewCell>(_: T.Type) {
@@ -22,15 +30,19 @@ extension UICollectionView {
         register(T.self, forCellWithReuseIdentifier: T.reuseIdentifier)
     }
     
+    
     func registerNibOf<T: UICollectionViewCell>(_: T.Type) {
-        let nib = UINib(nibName: T.reuseIdentifier, bundle: nil)
+        
+        let nib = UINib(nibName: T.nibName, bundle: nil)
         register(nib, forCellWithReuseIdentifier: T.reuseIdentifier)
     }
     
     func dequeueReusableCell<T: UICollectionViewCell>(forIndexPath indexPath: IndexPath) -> T {
-        guard let cell = dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
+        
+        guard let cell = self.dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
             fatalError("Could not dequeue cell with identifier: \(T.reuseIdentifier)")
         }
         return cell
     }
+    
 }

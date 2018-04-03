@@ -10,7 +10,7 @@ import UIKit
 import XLPagerTabStrip
 
 class HomeViewController: ButtonBarPagerTabStripViewController {
-    private lazy var items: [HomeItem] = self.loadSegments ()
+    private lazy var items = self.loadSegments ()
     
     override func viewDidLoad() {
         super.viewDidLoad()

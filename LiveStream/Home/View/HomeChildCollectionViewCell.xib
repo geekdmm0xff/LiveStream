@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeChildCollectionViewCell" customModule="LiveStream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="209" height="230"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="209" height="230"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I9M-XX-DtG" userLabel="Album">
+                        <rect key="frame" x="0.0" y="0.0" width="209" height="230"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="三语女神诗诗休息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDo-91-afr">
+                        <rect key="frame" x="10" y="205" width="99" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_live" translatesAutoresizingMaskIntoConstraints="NO" id="le8-sI-Dos">
+                        <rect key="frame" x="186" y="0.0" width="23" height="13"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thl-o5-fVC">
+                        <rect key="frame" x="121" y="207" width="50" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="qKA-qZ-fZp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="1024" image="home_icon_people"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="I9M-XX-DtG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0jG-iI-HKP"/>
+                <constraint firstItem="I9M-XX-DtG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2xz-dg-emI"/>
+                <constraint firstItem="le8-sI-Dos" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4G4-rZ-we5"/>
+                <constraint firstAttribute="trailing" secondItem="le8-sI-Dos" secondAttribute="trailing" id="5yk-5e-zBy"/>
+                <constraint firstItem="thl-o5-fVC" firstAttribute="leading" secondItem="DDo-91-afr" secondAttribute="trailing" constant="12" id="9vg-tc-tEs"/>
+                <constraint firstAttribute="trailing" secondItem="I9M-XX-DtG" secondAttribute="trailing" id="Baz-oq-LJk"/>
+                <constraint firstItem="thl-o5-fVC" firstAttribute="centerY" secondItem="DDo-91-afr" secondAttribute="centerY" id="EKT-mT-LF8"/>
+                <constraint firstAttribute="bottom" secondItem="I9M-XX-DtG" secondAttribute="bottom" id="ccR-SE-uMj"/>
+                <constraint firstAttribute="bottom" secondItem="DDo-91-afr" secondAttribute="bottom" constant="10" id="oTT-5h-Imx"/>
+                <constraint firstItem="DDo-91-afr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="zhP-RI-VIR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="209" height="230"/>
+            <connections>
+                <outlet property="albumImageView" destination="I9M-XX-DtG" id="NF3-6t-f0X"/>
+                <outlet property="liveTagImageView" destination="le8-sI-Dos" id="Tpm-cH-vYI"/>
+                <outlet property="nickLabel" destination="DDo-91-afr" id="IQB-5V-jXa"/>
+                <outlet property="onlinePeopleButton" destination="thl-o5-fVC" id="VpI-Fa-afV"/>
+            </connections>
+            <point key="canvasLocation" x="-61.5" y="54"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="home_icon_live" width="23" height="13"/>
+        <image name="home_icon_people" width="7" height="7"/>
+    </resources>
+</document>

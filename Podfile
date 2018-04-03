@@ -6,7 +6,7 @@ target 'LiveStream' do
   use_frameworks!
   pod 'XLPagerTabStrip', '~> 8.0'
   pod 'Alamofire', '~> 4.7.0'
-  pod 'ObjectMapper', '~> 3.1.0'
+  pod 'Kingfisher', '~> 4.6.3'
 
   target 'LiveStreamTests' do
     inherit! :search_paths
