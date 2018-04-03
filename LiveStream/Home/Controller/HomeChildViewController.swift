@@ -36,6 +36,7 @@ class HomeChildViewController: UIViewController {
 
 // MARK:- Request
 extension HomeChildViewController {
+    
     func loadData() {
         Networking.fetchHomeData(item: type, index: 0) {[weak self] (feeds) in
             if feeds.status == 200 {
@@ -47,7 +48,7 @@ extension HomeChildViewController {
 }
 
 // MARK:- UITableViewDataSource
-extension HomeChildViewController: UICollectionViewDataSource {
+extension HomeChildViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     private func setupCollectionView() {
         let layout = HomeWaterFlowLayout()
@@ -59,6 +60,9 @@ extension HomeChildViewController: UICollectionViewDataSource {
         layout.dataSource = self
         collectionView.collectionViewLayout = layout
         collectionView.registerNibOf(HomeChildCollectionViewCell.self)
+        
+        print(HomeChildCollectionViewCell.reuseIdentifier)
+        print(HomeChildCollectionViewCell.nibName)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -67,8 +71,15 @@ extension HomeChildViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: HomeChildCollectionViewCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
-        cell.anchor = anchors[indexPath.item]
+        var anchor = anchors[indexPath.item]
+        anchor.isEventIndex = indexPath.row % 2 == 0
+        cell.anchor = anchor
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = HomeAnchorViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -82,6 +93,7 @@ extension HomeChildViewController: IndicatorInfoProvider {
 
 // MARK:- HomeWaterFlowLayoutDataSource
 extension HomeChildViewController: HomeWaterFlowLayoutDataSource {
+    
     func numbersOfColumns(_ layout: HomeWaterFlowLayout) -> Int {
         return 2
     }

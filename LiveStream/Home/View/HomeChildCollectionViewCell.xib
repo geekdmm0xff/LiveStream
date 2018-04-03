@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="209" height="230"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="三语女神诗诗休息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDo-91-afr">
-                        <rect key="frame" x="10" y="205" width="99" height="15"/>
+                        <rect key="frame" x="10" y="205" width="129" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -32,7 +32,7 @@
                         <rect key="frame" x="186" y="0.0" width="23" height="13"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thl-o5-fVC">
-                        <rect key="frame" x="121" y="207" width="50" height="12"/>
+                        <rect key="frame" x="149" y="207" width="50" height="12"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="qKA-qZ-fZp"/>
                         </constraints>
@@ -47,11 +47,12 @@
                 <constraint firstItem="I9M-XX-DtG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2xz-dg-emI"/>
                 <constraint firstItem="le8-sI-Dos" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4G4-rZ-we5"/>
                 <constraint firstAttribute="trailing" secondItem="le8-sI-Dos" secondAttribute="trailing" id="5yk-5e-zBy"/>
-                <constraint firstItem="thl-o5-fVC" firstAttribute="leading" secondItem="DDo-91-afr" secondAttribute="trailing" constant="12" id="9vg-tc-tEs"/>
                 <constraint firstAttribute="trailing" secondItem="I9M-XX-DtG" secondAttribute="trailing" id="Baz-oq-LJk"/>
                 <constraint firstItem="thl-o5-fVC" firstAttribute="centerY" secondItem="DDo-91-afr" secondAttribute="centerY" id="EKT-mT-LF8"/>
+                <constraint firstAttribute="trailing" secondItem="thl-o5-fVC" secondAttribute="trailing" constant="10" id="WVK-TJ-MCA"/>
                 <constraint firstAttribute="bottom" secondItem="I9M-XX-DtG" secondAttribute="bottom" id="ccR-SE-uMj"/>
                 <constraint firstAttribute="bottom" secondItem="DDo-91-afr" secondAttribute="bottom" constant="10" id="oTT-5h-Imx"/>
+                <constraint firstItem="thl-o5-fVC" firstAttribute="leading" secondItem="DDo-91-afr" secondAttribute="trailing" constant="10" id="sMq-e7-O0R"/>
                 <constraint firstItem="DDo-91-afr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="zhP-RI-VIR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>

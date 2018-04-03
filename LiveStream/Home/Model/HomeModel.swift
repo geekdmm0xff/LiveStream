@@ -44,6 +44,7 @@ struct HomeAnchor: Codable {
     var channel: String
     var shortId: String
     var index: Int
+    var isEventIndex: Bool?
 }
 
 struct HomeFeeds: Codable {

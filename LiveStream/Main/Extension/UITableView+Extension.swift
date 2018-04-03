@@ -38,7 +38,7 @@ extension UITableView {
     }
     
     func registerNibOf<T: UITableViewCell>(_: T.Type) {
-        let nib = UINib(nibName: T.reuseIdentifier, bundle: nil)
+        let nib = UINib(nibName: T.nibName, bundle: nil)
         register(nib, forCellReuseIdentifier: T.reuseIdentifier)
     }
     

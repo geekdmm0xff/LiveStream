@@ -17,7 +17,7 @@ class HomeChildCollectionViewCell: UICollectionViewCell {
     
     var anchor: HomeAnchor? {
         didSet {
-            albumImageView.setImage(anchor?.pic51, "home_pic_default")
+            albumImageView.setImage((anchor?.isEventIndex!)! ? anchor?.pic74 : anchor?.pic51, "home_pic_default")
                 liveTagImageView.isHidden = anchor?.live == 0
                 nickLabel.text = anchor?.name
                 onlinePeopleButton.setTitle("\(anchor?.focus ?? 0)", for: .normal)
