@@ -47,11 +47,50 @@ struct HomeAnchor: Codable {
     var isEventIndex: Bool?
 }
 
-struct HomeFeeds: Codable {
+struct HomeMessage: Codable {
+    var anchors: [HomeAnchor]
+}
 
-    struct HomeMessage: Codable {
-        var anchors: [HomeAnchor]
-    }
+struct HomeFeeds: Codable {
     var message: HomeMessage
     var status: Int
+}
+
+struct HomeList: Codable {
+    var status: Int
+    var anchors: [HomeAnchor]
+    
+    enum CodingKeys: String, CodingKey {
+        case message
+        case status
+    }
+    
+    enum MessageCodingKeys: String, CodingKey {
+        case anchors
+    }
+    
+    init(status: Int, anchors: [HomeAnchor]) {
+        self.status = status
+        self.anchors = anchors
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let message = try container.nestedContainer(keyedBy: MessageCodingKeys.self, forKey: .message)
+        
+        let status = try container.decode(Int.self, forKey: .status)
+        
+        var unkeyContainer = try message.nestedUnkeyedContainer(forKey: .anchors)
+        var anchors: [HomeAnchor] = []
+        while !unkeyContainer.isAtEnd {
+            let anchor = try unkeyContainer.decode(HomeAnchor.self)
+            anchors.append(anchor)
+        }
+        
+        self.init(status: status, anchors: anchors)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        
+    }
 }

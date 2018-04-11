@@ -14,6 +14,7 @@ protocol Reusable: class {
 }
 
 protocol NibLoadable {
+    
     static var nibName: String { get }
 }
 

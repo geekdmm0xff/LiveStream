@@ -39,8 +39,11 @@ extension HomeChildViewController {
     
     func loadData() {
         Networking.fetchHomeData(item: type, index: 0) {[weak self] (feeds) in
+            guard let feeds = feeds else {
+                return
+            }
             if feeds.status == 200 {
-                self?.anchors = feeds.message.anchors
+                self?.anchors = feeds.anchors
                 self?.collectionView.reloadData()
             }
         }
@@ -60,9 +63,6 @@ extension HomeChildViewController: UICollectionViewDataSource, UICollectionViewD
         layout.dataSource = self
         collectionView.collectionViewLayout = layout
         collectionView.registerNibOf(HomeChildCollectionViewCell.self)
-        
-        print(HomeChildCollectionViewCell.reuseIdentifier)
-        print(HomeChildCollectionViewCell.nibName)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -78,7 +78,8 @@ extension HomeChildViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = HomeAnchorViewController()
+//        let vc = HomeAnchorViewController()
+        let vc = TestViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 }

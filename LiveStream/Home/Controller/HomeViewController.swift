@@ -32,12 +32,12 @@ extension HomeViewController {
     }
     
     private func setupSegment() {
-        self.settings.style.buttonBarItemFont = .systemFont(ofSize: 14)
-        self.settings.style.buttonBarItemTitleColor = UIColor(hexString: "#DCB770")
-        self.settings.style.buttonBarHeight = 40
-        self.settings.style.buttonBarBackgroundColor = UIColor.white
-        self.settings.style.buttonBarItemBackgroundColor = UIColor.white
-        self.settings.style.selectedBarHeight = 2
+        settings.style.buttonBarItemFont = .systemFont(ofSize: 14)
+        settings.style.buttonBarItemTitleColor = UIColor(hexString: "#DCB770")
+        settings.style.buttonBarHeight = 40
+        settings.style.buttonBarBackgroundColor = UIColor.white
+        settings.style.buttonBarItemBackgroundColor = UIColor.white
+        settings.style.selectedBarHeight = 2
         
         changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
