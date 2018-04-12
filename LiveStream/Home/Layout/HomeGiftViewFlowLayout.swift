@@ -10,8 +10,8 @@ import UIKit
 
 class HomeGiftViewFlowLayout: UICollectionViewFlowLayout {
     
-    private let row: Int    // 行
-    private let column: Int // 列
+    let row: Int    // 行
+    let column: Int // 列
     
     private lazy var attrs: [UICollectionViewLayoutAttributes] = []
     private var contentWidth: CGFloat = 0.0
