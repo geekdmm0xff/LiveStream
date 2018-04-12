@@ -8,19 +8,41 @@
 
 import UIKit
 
+protocol HomeGiftViewDataSource: class {
+    
+    func numberOfSections(in gitView: HomeGiftView) -> Int
+    
+    func gitView(_ gitView: HomeGiftView, numberOfItemsInSection section: Int) -> Int
+
+    func gitView(_ gitView: HomeGiftView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+}
+
 class HomeGiftView: UIView {
     
     private let titles: [String]
     private let style: HYTitleStyle
     private let layout: UICollectionViewLayout
+    private var collectionView: UICollectionView!
+    
+    weak open var dataSource: HomeGiftViewDataSource?
+    
+    open func reginster(cellClass: AnyClass?, reuseIdentifer: String) {
+        collectionView.register(cellClass, forCellWithReuseIdentifier: reuseIdentifer)
+    }
+    
+    open func reginster(nib: UINib?, reuseIdentifer: String) {
+        collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifer)
+    }
+    
+    open func dequeueReusableCell(reuseIdentifer: String, indexPath: IndexPath) -> UICollectionViewCell {
+        return collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifer, for: indexPath)
+    }
     
     init(frame: CGRect, titles: [String], style: HYTitleStyle, layout: UICollectionViewLayout) {
         self.titles = titles
         self.style = style
         self.layout = layout
-        
         super.init(frame: frame)
-        
         setupUI()
     }
     
@@ -54,22 +76,22 @@ extension HomeGiftView {
         collectionView.delegate = self
         collectionView.registerClassOf(UICollectionViewCell.self)
         addSubview(collectionView)
+        
+        self.collectionView = collectionView
     }
 }
 
 extension HomeGiftView: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
+        return dataSource?.numberOfSections(in: self) ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 21
+        return dataSource?.gitView(self, numberOfItemsInSection: section) ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
-        cell.backgroundColor = UIColor.randomColor()
-        return cell
+        return dataSource!.gitView(self, cellForItemAt: indexPath)
     }
 }
