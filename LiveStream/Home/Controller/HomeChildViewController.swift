@@ -78,8 +78,7 @@ extension HomeChildViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let vc = HomeAnchorViewController()
-        let vc = TestViewController()
+        let vc = HomeAnchorViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 }

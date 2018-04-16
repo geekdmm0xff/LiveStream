@@ -29,6 +29,9 @@
 		E361223D206CCB380050B248 /* HomeWaterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E361223C206CCB380050B248 /* HomeWaterFlowLayout.swift */; };
 		E39BCBC7207A02A3009F270A /* Emitterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39BCBC6207A02A3009F270A /* Emitterable.swift */; };
 		E39BCBC9207A0DFB009F270A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39BCBC8207A0DFB009F270A /* UIView+Extension.swift */; };
+		E3B797AF20809809000301D2 /* HomeChatToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B797AE20809809000301D2 /* HomeChatToolsView.swift */; };
+		E3B797B120809857000301D2 /* HomeChatToolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3B797B020809857000301D2 /* HomeChatToolsView.xib */; };
+		E3D53BA1208433440058925D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D53BA0208433440058925D /* R.generated.swift */; };
 		E3F41FE02072058F0029F8D5 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F41FDF2072058F0029F8D5 /* HomeModel.swift */; };
 		E3F41FE3207205FA0029F8D5 /* types.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3F41FE2207205FA0029F8D5 /* types.plist */; };
 		E3F41FE620721A2C0029F8D5 /* Netwoking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F41FE520721A2C0029F8D5 /* Netwoking.swift */; };
@@ -99,6 +102,9 @@
 		E361223C206CCB380050B248 /* HomeWaterFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWaterFlowLayout.swift; sourceTree = "<group>"; };
 		E39BCBC6207A02A3009F270A /* Emitterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitterable.swift; sourceTree = "<group>"; };
 		E39BCBC8207A0DFB009F270A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		E3B797AE20809809000301D2 /* HomeChatToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChatToolsView.swift; sourceTree = "<group>"; };
+		E3B797B020809857000301D2 /* HomeChatToolsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeChatToolsView.xib; sourceTree = "<group>"; };
+		E3D53BA0208433440058925D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		E3F41FDF2072058F0029F8D5 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		E3F41FE2207205FA0029F8D5 /* types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = types.plist; sourceTree = "<group>"; };
 		E3F41FE520721A2C0029F8D5 /* Netwoking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Netwoking.swift; sourceTree = "<group>"; };
@@ -217,7 +223,7 @@
 				847F6A41309DC506A6CADFA1E27A9093 /* Profile */,
 				56EEF6C52FF60CFAA2E9910E5633CD88 /* Rank */,
 				C280A504B4B2923FEFD2C6751F8DB5CA /* AppDelegate.swift */,
-				D554A25085532E57F239734142E03604 /* Assets.xcassets */,
+				E3D53BA0208433440058925D /* R.generated.swift */,
 				2ED99B74B040C1EEC5C59E0FCA36CA2C /* Info.plist */,
 				34AC61A0806D18C85AB9D8ACFAE0912F /* LaunchScreen.storyboard */,
 				DC1255808F959A21E13D308F37624C04 /* Main.storyboard */,
@@ -344,6 +350,7 @@
 		E3F41FE1207205EE0029F8D5 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				D554A25085532E57F239734142E03604 /* Assets.xcassets */,
 				E3F41FE2207205FA0029F8D5 /* types.plist */,
 			);
 			path = Resource;
@@ -371,6 +378,8 @@
 				E3F7ADB32073135000CBCACF /* HomeChildCollectionViewCell.swift */,
 				E3F7ADB42073135000CBCACF /* HomeChildCollectionViewCell.xib */,
 				E3FD4AA8207CAC71002B5405 /* HomeGiftView.swift */,
+				E3B797AE20809809000301D2 /* HomeChatToolsView.swift */,
+				E3B797B020809857000301D2 /* HomeChatToolsView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -413,8 +422,6 @@
 				75E8C3975BE32CF9BF0F7FB9152B8FCB /* Sources */,
 				BA414893C9454F7389A7E0511DB5A24D /* Frameworks */,
 				413C126FF472B59DABC77CF3308F9592 /* Resources */,
-				D190D7069F7426E3E9029D449292828D /* [CP] Embed Pods Frameworks */,
-				15EE31E5A5AE691F8A16620B7EB0C305 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -430,12 +437,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E24C059C38A7B3A225E0AD7E8B4E051 /* Build configuration list for PBXNativeTarget "LiveStream" */;
 			buildPhases = (
+				E3D53B9F2084323D0058925D /* ShellScript */,
 				D5F9391A82D69394145829A13F64EBC5 /* [CP] Check Pods Manifest.lock */,
 				5D0DC6FAF6AFC75873A5F28C822AE43A /* Sources */,
 				3A45DF0F88D41788DA529C16C42B08AE /* Frameworks */,
 				53D2D15254A771F7B7979BFEC111B9DD /* Resources */,
 				51E3B612CBC1A323793E09843A41F4A0 /* [CP] Embed Pods Frameworks */,
-				96AADED41CFF42F829DD548593F2D8DE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -454,8 +461,6 @@
 				05F545C2493DE0E2458C3114280E5B64 /* Sources */,
 				257672A3100BAE41001EA272F3D653FD /* Frameworks */,
 				976644FFC10A701E7F38CC6F8DDF4DAD /* Resources */,
-				4FC56D775DBAEC0C47CF822867C88EDC /* [CP] Embed Pods Frameworks */,
-				D77004E3889B481FB652353C8EEDE2B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -537,6 +542,7 @@
 				5726B263EECB708A648066BD19DB6221 /* Profile.storyboard in Resources */,
 				E3FD4AA7207CA8BC002B5405 /* TestViewController.xib in Resources */,
 				4D4363149CA090CEEDCE996F4E3F2284 /* Rank.storyboard in Resources */,
+				E3B797B120809857000301D2 /* HomeChatToolsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,36 +556,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		15EE31E5A5AE691F8A16620B7EB0C305 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiveStreamUITests/Pods-LiveStreamUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4FC56D775DBAEC0C47CF822867C88EDC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiveStreamTests/Pods-LiveStreamTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		51E3B612CBC1A323793E09843A41F4A0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -589,12 +565,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-LiveStream/Pods-LiveStream-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,36 +598,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		96AADED41CFF42F829DD548593F2D8DE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiveStream/Pods-LiveStream-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D190D7069F7426E3E9029D449292828D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiveStreamUITests/Pods-LiveStreamUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D5F9391A82D69394145829A13F64EBC5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -668,20 +616,18 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D77004E3889B481FB652353C8EEDE2B7 /* [CP] Copy Pods Resources */ = {
+		E3D53B9F2084323D0058925D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiveStreamTests/Pods-LiveStreamTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/LiveStream\"";
 		};
 		E89773C934E08F92A1F068875E40257D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -735,8 +681,10 @@
 				E3F7ADB8207317C600CBCACF /* UImageView+Extension.swift in Sources */,
 				B3D48BB56FC27B742EE2202114A4A28A /* UIColor+Extension.swift in Sources */,
 				E39BCBC7207A02A3009F270A /* Emitterable.swift in Sources */,
+				E3D53BA1208433440058925D /* R.generated.swift in Sources */,
 				1392C6D64B79603F887FF67CCD4D460F /* UITableView+Extension.swift in Sources */,
 				E3F41FE620721A2C0029F8D5 /* Netwoking.swift in Sources */,
+				E3B797AF20809809000301D2 /* HomeChatToolsView.swift in Sources */,
 				E3F41FE02072058F0029F8D5 /* HomeModel.swift in Sources */,
 				E3F7ADBB20734DEE00CBCACF /* HomeAnchorViewController.swift in Sources */,
 				E361223D206CCB380050B248 /* HomeWaterFlowLayout.swift in Sources */,

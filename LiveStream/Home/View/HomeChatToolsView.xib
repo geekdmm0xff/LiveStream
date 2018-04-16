@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeChatToolsView" customModule="LiveStream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="345" height="39"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="愉快地和主播聊一聊吧~" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gv7-UY-hpn">
+                    <rect key="frame" x="5" y="5" width="270" height="29"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="inputValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="l3z-SL-qJI"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQI-kD-5YH">
+                    <rect key="frame" x="280" y="5" width="60" height="29"/>
+                    <color key="backgroundColor" red="0.90589994190000001" green="0.76975184679999997" blue="0.2162306309" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="oCW-B4-2kI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="发送">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="sendMessageClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="oD5-sU-sYN"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gv7-UY-hpn" secondAttribute="bottom" constant="5" id="AOR-SH-hOT"/>
+                <constraint firstItem="fQI-kD-5YH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="R47-h9-vDc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fQI-kD-5YH" secondAttribute="bottom" constant="5" id="Zjr-Xh-QPi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fQI-kD-5YH" secondAttribute="trailing" constant="5" id="fc0-Be-Z1e"/>
+                <constraint firstItem="gv7-UY-hpn" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="jVa-4D-DAb"/>
+                <constraint firstItem="fQI-kD-5YH" firstAttribute="leading" secondItem="gv7-UY-hpn" secondAttribute="trailing" constant="5" id="p1E-Qp-G36"/>
+                <constraint firstItem="gv7-UY-hpn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="wvh-2q-rAV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="inputTextField" destination="gv7-UY-hpn" id="R4u-JZ-9v1"/>
+                <outlet property="sendButton" destination="fQI-kD-5YH" id="5NF-9i-MFz"/>
+            </connections>
+            <point key="canvasLocation" x="-54.5" y="-286.5"/>
+        </view>
+    </objects>
+</document>

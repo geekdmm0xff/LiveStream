@@ -1,18 +1,32 @@
 PODS:
   - Alamofire (4.7.0)
   - Kingfisher (4.6.3)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
   - XLPagerTabStrip (8.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7.0)
   - Kingfisher (~> 4.6.3)
+  - R.swift
   - XLPagerTabStrip (~> 8.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - Kingfisher
+    - R.swift
+    - R.swift.Library
+    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   Kingfisher: 98e6d5b5e807645743e8ed5ececd25d688d38452
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
 
-PODFILE CHECKSUM: 4add39aa26afbb4a036ac9e0125ec855cab5ac07
+PODFILE CHECKSUM: 0d217ee6ee85b12a680e1be59d3bdc96961f76b1
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0

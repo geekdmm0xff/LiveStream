@@ -7,6 +7,7 @@ target 'LiveStream' do
   pod 'XLPagerTabStrip', '~> 8.0'
   pod 'Alamofire', '~> 4.7.0'
   pod 'Kingfisher', '~> 4.6.3'
+  pod 'R.swift'
 
   target 'LiveStreamTests' do
     inherit! :search_paths

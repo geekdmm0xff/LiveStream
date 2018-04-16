@@ -8,7 +8,17 @@
 
 import UIKit
 
+
+
 class HYTitleStyle {
+    
+    enum UIATheme {
+        case gift
+        case emoticon
+    }
+    
+    /// 整体样式
+    var theme: UIATheme = .gift
     /// 是否是滚动的Title
     var isScrollEnable : Bool = false
     /// 普通Title颜色

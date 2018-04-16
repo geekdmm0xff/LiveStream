@@ -59,21 +59,35 @@ class HomeGiftView: UIView {
 extension HomeGiftView {
     
     private func setupUI() {
+        
+        let pageHeight: CGFloat = 20.0
         let titleHeight: CGFloat = style.titleHeight
-        let titleRect = CGRect(x: 0, y: 0, width: Config.screenWidth, height: titleHeight)
+        let collectionHeight: CGFloat = bounds.size.height - style.titleHeight - pageHeight
+        
+        var titleY: CGFloat = 0.0
+        if style.theme == .emoticon {
+            titleY = collectionHeight + pageHeight
+        }
+        let titleRect = CGRect(x: 0, y: titleY, width: Config.screenWidth, height: titleHeight)
         let titleView = HYTitleView(frame: titleRect, titles: titles, style: style)
         titleView.delegate = self
         titleView.backgroundColor = UIColor.randomColor()
         addSubview(titleView)
         
-        let pageHeight: CGFloat = 20.0
-        let pageRect = CGRect(x: 0, y: bounds.size.height - pageHeight, width: Config.screenWidth, height: pageHeight)
+        var pageY: CGFloat = collectionHeight + titleHeight
+        if style.theme == .emoticon {
+            pageY = collectionHeight
+        }
+        let pageRect = CGRect(x: 0, y: pageY, width: Config.screenWidth, height: pageHeight)
         let pageControl = UIPageControl(frame: pageRect)
         pageControl.backgroundColor = UIColor.randomColor()
         addSubview(pageControl)
         
-        let collectionHeight: CGFloat = bounds.size.height - style.titleHeight - pageHeight
-        let collectionRect = CGRect(x: 0, y: titleHeight, width: Config.screenWidth, height: collectionHeight)
+        var collectionY: CGFloat = titleHeight
+        if style.theme == .emoticon {
+            collectionY = 0
+        }
+        let collectionRect = CGRect(x: 0, y: collectionY, width: Config.screenWidth, height: collectionHeight)
         let collectionView = UICollectionView(frame: collectionRect, collectionViewLayout: layout)
         collectionView.isPagingEnabled = true
         collectionView.showsHorizontalScrollIndicator = false

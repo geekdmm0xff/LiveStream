@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,18 +31,30 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7f8-Kz-4pF" userLabel="聊天">
                             <rect key="frame" x="0.0" y="0.0" width="75" height="44"/>
                             <state key="normal" image="room_btn_chat"/>
+                            <connections>
+                                <action selector="actionButtonClicked:" destination="-1" eventType="touchUpInside" id="i7a-ok-598"/>
+                            </connections>
                         </button>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdI-KD-0Aj" userLabel="分享">
                             <rect key="frame" x="75" y="0.0" width="75" height="44"/>
                             <state key="normal" image="menu_btn_share"/>
+                            <connections>
+                                <action selector="actionButtonClicked:" destination="-1" eventType="touchUpInside" id="HSB-PR-AcG"/>
+                            </connections>
                         </button>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dnh-qd-Kt4" userLabel="礼物">
                             <rect key="frame" x="150" y="0.0" width="75" height="44"/>
                             <state key="normal" image="room_btn_gift"/>
+                            <connections>
+                                <action selector="actionButtonClicked:" destination="-1" eventType="touchUpInside" id="QlK-Vk-uEm"/>
+                            </connections>
                         </button>
                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rd3-My-ha9" userLabel="更多">
                             <rect key="frame" x="225" y="0.0" width="75" height="44"/>
                             <state key="normal" image="room_btn_more"/>
+                            <connections>
+                                <action selector="actionButtonClicked:" destination="-1" eventType="touchUpInside" id="cn8-bo-Svb"/>
+                            </connections>
                         </button>
                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaJ-IL-0HG" userLabel="星星">
                             <rect key="frame" x="300" y="0.0" width="75" height="44"/>
@@ -151,7 +163,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="74p-EI-k23" secondAttribute="trailing" id="yep-gU-CWP"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="-401.5" y="-80.5"/>
+            <point key="canvasLocation" x="-564" y="-176"/>
         </view>
         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6kf-Zz-fWJ">
             <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
