@@ -27,11 +27,16 @@
 		E3612237206C8F710050B248 /* HomeChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3612236206C8F710050B248 /* HomeChildViewController.xib */; };
 		E361223A206CBC450050B248 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3612239206CBC450050B248 /* UICollectionView+Extension.swift */; };
 		E361223D206CCB380050B248 /* HomeWaterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E361223C206CCB380050B248 /* HomeWaterFlowLayout.swift */; };
+		E36A597A2085948F0007F9D3 /* HomeEmoticonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36A59782085948F0007F9D3 /* HomeEmoticonCollectionViewCell.swift */; };
+		E36A597B2085948F0007F9D3 /* HomeEmoticonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E36A59792085948F0007F9D3 /* HomeEmoticonCollectionViewCell.xib */; };
 		E39BCBC7207A02A3009F270A /* Emitterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39BCBC6207A02A3009F270A /* Emitterable.swift */; };
 		E39BCBC9207A0DFB009F270A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39BCBC8207A0DFB009F270A /* UIView+Extension.swift */; };
 		E3B797AF20809809000301D2 /* HomeChatToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B797AE20809809000301D2 /* HomeChatToolsView.swift */; };
 		E3B797B120809857000301D2 /* HomeChatToolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3B797B020809857000301D2 /* HomeChatToolsView.xib */; };
 		E3D53BA1208433440058925D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D53BA0208433440058925D /* R.generated.swift */; };
+		E3D53BA62084947E0058925D /* QHSohuGifSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D53BA42084947E0058925D /* QHSohuGifSort.plist */; };
+		E3D53BA72084947E0058925D /* QHNormalEmotionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D53BA52084947E0058925D /* QHNormalEmotionSort.plist */; };
+		E3D53BA9208495560058925D /* HomeEmoticonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D53BA8208495560058925D /* HomeEmoticonView.swift */; };
 		E3F41FE02072058F0029F8D5 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F41FDF2072058F0029F8D5 /* HomeModel.swift */; };
 		E3F41FE3207205FA0029F8D5 /* types.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3F41FE2207205FA0029F8D5 /* types.plist */; };
 		E3F41FE620721A2C0029F8D5 /* Netwoking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F41FE520721A2C0029F8D5 /* Netwoking.swift */; };
@@ -100,11 +105,16 @@
 		E3612236206C8F710050B248 /* HomeChildViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeChildViewController.xib; sourceTree = "<group>"; };
 		E3612239206CBC450050B248 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		E361223C206CCB380050B248 /* HomeWaterFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWaterFlowLayout.swift; sourceTree = "<group>"; };
+		E36A59782085948F0007F9D3 /* HomeEmoticonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEmoticonCollectionViewCell.swift; sourceTree = "<group>"; };
+		E36A59792085948F0007F9D3 /* HomeEmoticonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeEmoticonCollectionViewCell.xib; sourceTree = "<group>"; };
 		E39BCBC6207A02A3009F270A /* Emitterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitterable.swift; sourceTree = "<group>"; };
 		E39BCBC8207A0DFB009F270A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		E3B797AE20809809000301D2 /* HomeChatToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChatToolsView.swift; sourceTree = "<group>"; };
 		E3B797B020809857000301D2 /* HomeChatToolsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeChatToolsView.xib; sourceTree = "<group>"; };
 		E3D53BA0208433440058925D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		E3D53BA42084947E0058925D /* QHSohuGifSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHSohuGifSort.plist; sourceTree = "<group>"; };
+		E3D53BA52084947E0058925D /* QHNormalEmotionSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHNormalEmotionSort.plist; sourceTree = "<group>"; };
+		E3D53BA8208495560058925D /* HomeEmoticonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEmoticonView.swift; sourceTree = "<group>"; };
 		E3F41FDF2072058F0029F8D5 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		E3F41FE2207205FA0029F8D5 /* types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = types.plist; sourceTree = "<group>"; };
 		E3F41FE520721A2C0029F8D5 /* Netwoking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Netwoking.swift; sourceTree = "<group>"; };
@@ -350,6 +360,8 @@
 		E3F41FE1207205EE0029F8D5 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E3D53BA52084947E0058925D /* QHNormalEmotionSort.plist */,
+				E3D53BA42084947E0058925D /* QHSohuGifSort.plist */,
 				D554A25085532E57F239734142E03604 /* Assets.xcassets */,
 				E3F41FE2207205FA0029F8D5 /* types.plist */,
 			);
@@ -380,6 +392,9 @@
 				E3FD4AA8207CAC71002B5405 /* HomeGiftView.swift */,
 				E3B797AE20809809000301D2 /* HomeChatToolsView.swift */,
 				E3B797B020809857000301D2 /* HomeChatToolsView.xib */,
+				E3D53BA8208495560058925D /* HomeEmoticonView.swift */,
+				E36A59782085948F0007F9D3 /* HomeEmoticonCollectionViewCell.swift */,
+				E36A59792085948F0007F9D3 /* HomeEmoticonCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -437,8 +452,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E24C059C38A7B3A225E0AD7E8B4E051 /* Build configuration list for PBXNativeTarget "LiveStream" */;
 			buildPhases = (
-				E3D53B9F2084323D0058925D /* ShellScript */,
 				D5F9391A82D69394145829A13F64EBC5 /* [CP] Check Pods Manifest.lock */,
+				E3D53B9F2084323D0058925D /* ShellScript */,
 				5D0DC6FAF6AFC75873A5F28C822AE43A /* Sources */,
 				3A45DF0F88D41788DA529C16C42B08AE /* Frameworks */,
 				53D2D15254A771F7B7979BFEC111B9DD /* Resources */,
@@ -532,13 +547,16 @@
 			files = (
 				E3612237206C8F710050B248 /* HomeChildViewController.xib in Resources */,
 				0DDB7F13A607416B4378E844D2948194 /* Assets.xcassets in Resources */,
+				E3D53BA72084947E0058925D /* QHNormalEmotionSort.plist in Resources */,
 				E3F7ADBC20734DEE00CBCACF /* HomeAnchorViewController.xib in Resources */,
 				EF24515AE2496667DE2A8B15A179AF67 /* Discover.storyboard in Resources */,
+				E36A597B2085948F0007F9D3 /* HomeEmoticonCollectionViewCell.xib in Resources */,
 				E3F41FE3207205FA0029F8D5 /* types.plist in Resources */,
 				E3F7ADB62073135000CBCACF /* HomeChildCollectionViewCell.xib in Resources */,
 				2D491FAD4C377BA84F2DCBCC34FEC1B6 /* Home.storyboard in Resources */,
 				0E92307AD2F706ECFB69AC200EE120E2 /* LaunchScreen.storyboard in Resources */,
 				B6F000838D93DEA5CB713C4B2A397111 /* Main.storyboard in Resources */,
+				E3D53BA62084947E0058925D /* QHSohuGifSort.plist in Resources */,
 				5726B263EECB708A648066BD19DB6221 /* Profile.storyboard in Resources */,
 				E3FD4AA7207CA8BC002B5405 /* TestViewController.xib in Resources */,
 				4D4363149CA090CEEDCE996F4E3F2284 /* Rank.storyboard in Resources */,
@@ -662,6 +680,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3D53BA9208495560058925D /* HomeEmoticonView.swift in Sources */,
 				E3F7ADB52073135000CBCACF /* HomeChildCollectionViewCell.swift in Sources */,
 				E361223A206CBC450050B248 /* UICollectionView+Extension.swift in Sources */,
 				E3FD4AA6207CA8BC002B5405 /* TestViewController.swift in Sources */,
@@ -682,6 +701,7 @@
 				B3D48BB56FC27B742EE2202114A4A28A /* UIColor+Extension.swift in Sources */,
 				E39BCBC7207A02A3009F270A /* Emitterable.swift in Sources */,
 				E3D53BA1208433440058925D /* R.generated.swift in Sources */,
+				E36A597A2085948F0007F9D3 /* HomeEmoticonCollectionViewCell.swift in Sources */,
 				1392C6D64B79603F887FF67CCD4D460F /* UITableView+Extension.swift in Sources */,
 				E3F41FE620721A2C0029F8D5 /* Netwoking.swift in Sources */,
 				E3B797AF20809809000301D2 /* HomeChatToolsView.swift in Sources */,
