@@ -38,7 +38,7 @@ class HYTitleStyle {
     /// 底部滚动条的高度
     var bottomLineH : CGFloat = 2
     /// 自身高度
-    var titleHeight: CGFloat = 44.0
+    var titleHeight: CGFloat = 34.0
     
     /// 是否进行缩放
     var isNeedScale : Bool = false

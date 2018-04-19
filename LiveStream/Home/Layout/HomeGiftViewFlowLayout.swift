@@ -67,8 +67,8 @@ extension HomeGiftViewFlowLayout {
         
         // 1.
         func calcItemSize() -> CGSize {
-            let w: CGFloat = (width - collectionView!.layoutMargins.left - collectionView!.layoutMargins.right - minimumInteritemSpacing * CGFloat(column - 1)) / CGFloat(column)
-            let h: CGFloat = (height - collectionView!.layoutMargins.top - collectionView!.layoutMargins.bottom - minimumLineSpacing * CGFloat(row - 1)) / CGFloat(row)
+            let w: CGFloat = (width - sectionInset.left - sectionInset.right - minimumInteritemSpacing * CGFloat(column - 1)) / CGFloat(column)
+            let h: CGFloat = (height - sectionInset.top - sectionInset.bottom - minimumLineSpacing * CGFloat(row - 1)) / CGFloat(row)
             return CGSize(width: w, height: h)
         }
         

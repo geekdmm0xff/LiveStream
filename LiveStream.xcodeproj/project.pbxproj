@@ -24,9 +24,12 @@
 		D2C1CAEB7153E30301B16374812AC39F /* LiveStreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D28B998B90EDD3470DA88A03DBE74 /* LiveStreamTests.swift */; };
 		D5458E4B858290EF51F7A3FCF83AB9BE /* LiveStreamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE95CC1719038F519A21086021B5071 /* LiveStreamUITests.swift */; };
 		E30D181E207DA6BD003269DE /* HomeGiftViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D181D207DA6BD003269DE /* HomeGiftViewFlowLayout.swift */; };
+		E33AF59C20871CE900B09698 /* ReqeustNetWorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33AF59B20871CE900B09698 /* ReqeustNetWorking.swift */; };
 		E3612237206C8F710050B248 /* HomeChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3612236206C8F710050B248 /* HomeChildViewController.xib */; };
 		E361223A206CBC450050B248 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3612239206CBC450050B248 /* UICollectionView+Extension.swift */; };
 		E361223D206CCB380050B248 /* HomeWaterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E361223C206CCB380050B248 /* HomeWaterFlowLayout.swift */; };
+		E365A93C2085ED22005BC653 /* HomeShowGiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E365A93B2085ED22005BC653 /* HomeShowGiftView.swift */; };
+		E365A93E2085F21B005BC653 /* HomeShowGiftView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E365A93D2085F21B005BC653 /* HomeShowGiftView.xib */; };
 		E36A597A2085948F0007F9D3 /* HomeEmoticonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36A59782085948F0007F9D3 /* HomeEmoticonCollectionViewCell.swift */; };
 		E36A597B2085948F0007F9D3 /* HomeEmoticonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E36A59792085948F0007F9D3 /* HomeEmoticonCollectionViewCell.xib */; };
 		E39BCBC7207A02A3009F270A /* Emitterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39BCBC6207A02A3009F270A /* Emitterable.swift */; };
@@ -37,9 +40,10 @@
 		E3D53BA62084947E0058925D /* QHSohuGifSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D53BA42084947E0058925D /* QHSohuGifSort.plist */; };
 		E3D53BA72084947E0058925D /* QHNormalEmotionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D53BA52084947E0058925D /* QHNormalEmotionSort.plist */; };
 		E3D53BA9208495560058925D /* HomeEmoticonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D53BA8208495560058925D /* HomeEmoticonView.swift */; };
+		E3F28ACE20887A2800A42BD7 /* HomeGiftCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F28ACC20887A2800A42BD7 /* HomeGiftCollectionViewCell.swift */; };
+		E3F28ACF20887A2800A42BD7 /* HomeGiftCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3F28ACD20887A2800A42BD7 /* HomeGiftCollectionViewCell.xib */; };
 		E3F41FE02072058F0029F8D5 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F41FDF2072058F0029F8D5 /* HomeModel.swift */; };
 		E3F41FE3207205FA0029F8D5 /* types.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3F41FE2207205FA0029F8D5 /* types.plist */; };
-		E3F41FE620721A2C0029F8D5 /* Netwoking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F41FE520721A2C0029F8D5 /* Netwoking.swift */; };
 		E3F7ADAD20730FA300CBCACF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7ADAC20730FA300CBCACF /* Config.swift */; };
 		E3F7ADB52073135000CBCACF /* HomeChildCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7ADB32073135000CBCACF /* HomeChildCollectionViewCell.swift */; };
 		E3F7ADB62073135000CBCACF /* HomeChildCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3F7ADB42073135000CBCACF /* HomeChildCollectionViewCell.xib */; };
@@ -50,8 +54,6 @@
 		E3FD4AA1207C94F2002B5405 /* HYTitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD4A9D207C94F2002B5405 /* HYTitleStyle.swift */; };
 		E3FD4AA2207C94F2002B5405 /* HYPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD4A9E207C94F2002B5405 /* HYPageView.swift */; };
 		E3FD4AA3207C94F2002B5405 /* HYContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD4A9F207C94F2002B5405 /* HYContentView.swift */; };
-		E3FD4AA6207CA8BC002B5405 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD4AA4207CA8BC002B5405 /* TestViewController.swift */; };
-		E3FD4AA7207CA8BC002B5405 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3FD4AA5207CA8BC002B5405 /* TestViewController.xib */; };
 		E3FD4AA9207CAC71002B5405 /* HomeGiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD4AA8207CAC71002B5405 /* HomeGiftView.swift */; };
 		EF24515AE2496667DE2A8B15A179AF67 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F81DDDC2710E630C7D5F2D5E360DBEC7 /* Discover.storyboard */; };
 		F333BDB60A00BF1BB02F0FEDD0D0CE57 /* HomeChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C9E3CB28A64B5C632348D2464D0D58 /* HomeChildViewController.swift */; };
@@ -102,9 +104,12 @@
 		D28FDBF84A7A28B36410717674ECB35E /* LiveStreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveStreamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D554A25085532E57F239734142E03604 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E30D181D207DA6BD003269DE /* HomeGiftViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGiftViewFlowLayout.swift; sourceTree = "<group>"; };
+		E33AF59B20871CE900B09698 /* ReqeustNetWorking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqeustNetWorking.swift; sourceTree = "<group>"; };
 		E3612236206C8F710050B248 /* HomeChildViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeChildViewController.xib; sourceTree = "<group>"; };
 		E3612239206CBC450050B248 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		E361223C206CCB380050B248 /* HomeWaterFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWaterFlowLayout.swift; sourceTree = "<group>"; };
+		E365A93B2085ED22005BC653 /* HomeShowGiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeShowGiftView.swift; sourceTree = "<group>"; };
+		E365A93D2085F21B005BC653 /* HomeShowGiftView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeShowGiftView.xib; sourceTree = "<group>"; };
 		E36A59782085948F0007F9D3 /* HomeEmoticonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEmoticonCollectionViewCell.swift; sourceTree = "<group>"; };
 		E36A59792085948F0007F9D3 /* HomeEmoticonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeEmoticonCollectionViewCell.xib; sourceTree = "<group>"; };
 		E39BCBC6207A02A3009F270A /* Emitterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitterable.swift; sourceTree = "<group>"; };
@@ -115,9 +120,10 @@
 		E3D53BA42084947E0058925D /* QHSohuGifSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHSohuGifSort.plist; sourceTree = "<group>"; };
 		E3D53BA52084947E0058925D /* QHNormalEmotionSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHNormalEmotionSort.plist; sourceTree = "<group>"; };
 		E3D53BA8208495560058925D /* HomeEmoticonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEmoticonView.swift; sourceTree = "<group>"; };
+		E3F28ACC20887A2800A42BD7 /* HomeGiftCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGiftCollectionViewCell.swift; sourceTree = "<group>"; };
+		E3F28ACD20887A2800A42BD7 /* HomeGiftCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeGiftCollectionViewCell.xib; sourceTree = "<group>"; };
 		E3F41FDF2072058F0029F8D5 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		E3F41FE2207205FA0029F8D5 /* types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = types.plist; sourceTree = "<group>"; };
-		E3F41FE520721A2C0029F8D5 /* Netwoking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Netwoking.swift; sourceTree = "<group>"; };
 		E3F7ADAC20730FA300CBCACF /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		E3F7ADB32073135000CBCACF /* HomeChildCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChildCollectionViewCell.swift; sourceTree = "<group>"; };
 		E3F7ADB42073135000CBCACF /* HomeChildCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeChildCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -128,8 +134,6 @@
 		E3FD4A9D207C94F2002B5405 /* HYTitleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYTitleStyle.swift; sourceTree = "<group>"; };
 		E3FD4A9E207C94F2002B5405 /* HYPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYPageView.swift; sourceTree = "<group>"; };
 		E3FD4A9F207C94F2002B5405 /* HYContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYContentView.swift; sourceTree = "<group>"; };
-		E3FD4AA4207CA8BC002B5405 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		E3FD4AA5207CA8BC002B5405 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		E3FD4AA8207CAC71002B5405 /* HomeGiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGiftView.swift; sourceTree = "<group>"; };
 		EFE95CC1719038F519A21086021B5071 /* LiveStreamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamUITests.swift; sourceTree = "<group>"; };
 		F29D28B998B90EDD3470DA88A03DBE74 /* LiveStreamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamTests.swift; sourceTree = "<group>"; };
@@ -176,8 +180,6 @@
 				F811FD1041FEBF560D65925D16B03999 /* HomeViewController.swift */,
 				E3F7ADB920734DEE00CBCACF /* HomeAnchorViewController.swift */,
 				E3F7ADBA20734DEE00CBCACF /* HomeAnchorViewController.xib */,
-				E3FD4AA4207CA8BC002B5405 /* TestViewController.swift */,
-				E3FD4AA5207CA8BC002B5405 /* TestViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -371,7 +373,7 @@
 		E3F41FE420721A080029F8D5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				E3F41FE520721A2C0029F8D5 /* Netwoking.swift */,
+				E33AF59B20871CE900B09698 /* ReqeustNetWorking.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -395,6 +397,10 @@
 				E3D53BA8208495560058925D /* HomeEmoticonView.swift */,
 				E36A59782085948F0007F9D3 /* HomeEmoticonCollectionViewCell.swift */,
 				E36A59792085948F0007F9D3 /* HomeEmoticonCollectionViewCell.xib */,
+				E365A93B2085ED22005BC653 /* HomeShowGiftView.swift */,
+				E365A93D2085F21B005BC653 /* HomeShowGiftView.xib */,
+				E3F28ACC20887A2800A42BD7 /* HomeGiftCollectionViewCell.swift */,
+				E3F28ACD20887A2800A42BD7 /* HomeGiftCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -546,6 +552,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3612237206C8F710050B248 /* HomeChildViewController.xib in Resources */,
+				E3F28ACF20887A2800A42BD7 /* HomeGiftCollectionViewCell.xib in Resources */,
 				0DDB7F13A607416B4378E844D2948194 /* Assets.xcassets in Resources */,
 				E3D53BA72084947E0058925D /* QHNormalEmotionSort.plist in Resources */,
 				E3F7ADBC20734DEE00CBCACF /* HomeAnchorViewController.xib in Resources */,
@@ -558,7 +565,7 @@
 				B6F000838D93DEA5CB713C4B2A397111 /* Main.storyboard in Resources */,
 				E3D53BA62084947E0058925D /* QHSohuGifSort.plist in Resources */,
 				5726B263EECB708A648066BD19DB6221 /* Profile.storyboard in Resources */,
-				E3FD4AA7207CA8BC002B5405 /* TestViewController.xib in Resources */,
+				E365A93E2085F21B005BC653 /* HomeShowGiftView.xib in Resources */,
 				4D4363149CA090CEEDCE996F4E3F2284 /* Rank.storyboard in Resources */,
 				E3B797B120809857000301D2 /* HomeChatToolsView.xib in Resources */,
 			);
@@ -683,12 +690,12 @@
 				E3D53BA9208495560058925D /* HomeEmoticonView.swift in Sources */,
 				E3F7ADB52073135000CBCACF /* HomeChildCollectionViewCell.swift in Sources */,
 				E361223A206CBC450050B248 /* UICollectionView+Extension.swift in Sources */,
-				E3FD4AA6207CA8BC002B5405 /* TestViewController.swift in Sources */,
 				E30D181E207DA6BD003269DE /* HomeGiftViewFlowLayout.swift in Sources */,
 				E3FD4AA3207C94F2002B5405 /* HYContentView.swift in Sources */,
 				11AB04BBC4F8B445DF890E2FF47A8A19 /* AppDelegate.swift in Sources */,
 				F333BDB60A00BF1BB02F0FEDD0D0CE57 /* HomeChildViewController.swift in Sources */,
 				E3FD4AA2207C94F2002B5405 /* HYPageView.swift in Sources */,
+				E3F28ACE20887A2800A42BD7 /* HomeGiftCollectionViewCell.swift in Sources */,
 				E3FD4AA1207C94F2002B5405 /* HYTitleStyle.swift in Sources */,
 				48BAA50CAED5EA66DF603AF2DA631971 /* HomeNavViewController.swift in Sources */,
 				3C46481901B29A26002E318B71FB9117 /* HomeViewController.swift in Sources */,
@@ -697,13 +704,14 @@
 				E3FD4AA9207CAC71002B5405 /* HomeGiftView.swift in Sources */,
 				E39BCBC9207A0DFB009F270A /* UIView+Extension.swift in Sources */,
 				B4451FA51046CAECAEDC1F8C80F518B1 /* MainViewController.swift in Sources */,
+				E33AF59C20871CE900B09698 /* ReqeustNetWorking.swift in Sources */,
 				E3F7ADB8207317C600CBCACF /* UImageView+Extension.swift in Sources */,
+				E365A93C2085ED22005BC653 /* HomeShowGiftView.swift in Sources */,
 				B3D48BB56FC27B742EE2202114A4A28A /* UIColor+Extension.swift in Sources */,
 				E39BCBC7207A02A3009F270A /* Emitterable.swift in Sources */,
 				E3D53BA1208433440058925D /* R.generated.swift in Sources */,
 				E36A597A2085948F0007F9D3 /* HomeEmoticonCollectionViewCell.swift in Sources */,
 				1392C6D64B79603F887FF67CCD4D460F /* UITableView+Extension.swift in Sources */,
-				E3F41FE620721A2C0029F8D5 /* Netwoking.swift in Sources */,
 				E3B797AF20809809000301D2 /* HomeChatToolsView.swift in Sources */,
 				E3F41FE02072058F0029F8D5 /* HomeModel.swift in Sources */,
 				E3F7ADBB20734DEE00CBCACF /* HomeAnchorViewController.swift in Sources */,

@@ -18,20 +18,7 @@ class HomeChatToolsView: UIView, LoadXibable {
     @IBOutlet weak var sendButton: UIButton!
     
     private lazy var textRightButton: UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 32, height: 32)) // original: 25
-    private lazy var emoticonView: HomeGiftView = {
-        let style = HYTitleStyle()
-        style.isShowBottomLine = true
-        style.theme = HYTitleStyle.UIATheme.emoticon
-        let layout = HomeGiftViewFlowLayout(row: 3, column: 7)
-        layout.minimumLineSpacing = 10
-        layout.minimumInteritemSpacing = 10
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        
-        let view = HomeGiftView(frame: CGRect(x: 0, y: 0, width: Config.screenWidth, height: 200), titles: ["热门", "专属"], style: style, layout: layout)
-        view.dataSource = self
-        view.reginster(cellClass: UICollectionViewCell.self, reuseIdentifer: "cell")
-        return view
-    }()
+    private lazy var emoticonView = HomeEmoticonView(frame: CGRect(x: 0, y: 0, width: Config.screenWidth, height: 250))
     
     weak var delegate: HomeChatToolsViewDelegate?
     
@@ -45,6 +32,17 @@ extension HomeChatToolsView {
     
     func setupUI() {
         setupTextField()
+        setupEmoticonView()
+    }
+    
+    func setupEmoticonView() {
+        emoticonView.clickedCallback = { [weak self] in
+            if $0.name == R.image.deleteN.name {
+                self?.deleteEmoji()
+            } else {
+                self?.insertEmoji($0.name)
+            }
+        }
     }
     
     func setupTextField() {
@@ -55,6 +53,26 @@ extension HomeChatToolsView {
         inputTextField.rightViewMode = .always
         inputTextField.allowsEditingTextAttributes = true
     }
+    
+    func reloadInputView() {
+        if inputTextField.inputView == nil {
+            inputTextField.inputView = emoticonView
+        } else {
+            inputTextField.inputView = nil
+        }
+        inputTextField.reloadInputViews()
+    }
+    
+    func deleteEmoji() {
+        inputTextField.deleteBackward()
+    }
+    
+    func insertEmoji(_ name: String) {
+        guard let r = inputTextField.selectedTextRange else {
+            return
+        }
+        inputTextField.replace(r, withText: name)
+    }
 }
 
 // MARK:- Actions
@@ -62,12 +80,9 @@ extension HomeChatToolsView {
     
     @objc func rightButtonClicked(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
-        if inputTextField.inputView == nil {
-            inputTextField.inputView = emoticonView
-        } else {
-            inputTextField.inputView = nil
-        }
-        inputTextField.reloadInputViews()
+        let range = inputTextField.selectedTextRange
+        reloadInputView()
+        inputTextField.selectedTextRange = range
     }
     
     @IBAction func sendMessageClicked(_ sender: UIButton) {
@@ -79,22 +94,5 @@ extension HomeChatToolsView {
     
     @IBAction func inputValueChanged(_ sender: UITextField) {
         sendButton.isEnabled = sender.text!.count != 0
-    }
-    
-}
-
-extension HomeChatToolsView: HomeGiftViewDataSource {
-    func numberOfSections(in gitView: HomeGiftView) -> Int {
-        return 2
-    }
-    
-    func gitView(_ gitView: HomeGiftView, numberOfItemsInSection section: Int) -> Int {
-        return 22
-    }
-    
-    func gitView(_ gitView: HomeGiftView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = gitView.dequeueReusableCell(reuseIdentifer: "cell", indexPath: indexPath)
-        cell.backgroundColor = UIColor.randomColor()
-        return cell
     }
 }

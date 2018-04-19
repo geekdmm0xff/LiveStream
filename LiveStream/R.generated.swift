@@ -21,10 +21,26 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 1 files.
+  /// This `R.file` struct is generated, and contains static references to 3 files.
   struct file {
+    /// Resource file `QHNormalEmotionSort.plist`.
+    static let qhNormalEmotionSortPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "QHNormalEmotionSort", pathExtension: "plist")
+    /// Resource file `QHSohuGifSort.plist`.
+    static let qhSohuGifSortPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "QHSohuGifSort", pathExtension: "plist")
     /// Resource file `types.plist`.
     static let typesPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "types", pathExtension: "plist")
+    
+    /// `bundle.url(forResource: "QHNormalEmotionSort", withExtension: "plist")`
+    static func qhNormalEmotionSortPlist(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.qhNormalEmotionSortPlist
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "QHSohuGifSort", withExtension: "plist")`
+    static func qhSohuGifSortPlist(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.qhSohuGifSortPlist
+      return fileResource.bundle.url(forResource: fileResource)
+    }
     
     /// `bundle.url(forResource: "types", withExtension: "plist")`
     static func typesPlist(_: Void = ()) -> Foundation.URL? {
@@ -746,7 +762,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 7 nibs.
   struct nib {
     /// Nib `HomeAnchorViewController`.
     static let homeAnchorViewController = _R.nib._HomeAnchorViewController()
@@ -756,8 +772,12 @@ struct R: Rswift.Validatable {
     static let homeChildCollectionViewCell = _R.nib._HomeChildCollectionViewCell()
     /// Nib `HomeChildViewController`.
     static let homeChildViewController = _R.nib._HomeChildViewController()
-    /// Nib `TestViewController`.
-    static let testViewController = _R.nib._TestViewController()
+    /// Nib `HomeEmoticonCollectionViewCell`.
+    static let homeEmoticonCollectionViewCell = _R.nib._HomeEmoticonCollectionViewCell()
+    /// Nib `HomeGiftCollectionViewCell`.
+    static let homeGiftCollectionViewCell = _R.nib._HomeGiftCollectionViewCell()
+    /// Nib `HomeShowGiftView`.
+    static let homeShowGiftView = _R.nib._HomeShowGiftView()
     
     /// `UINib(name: "HomeAnchorViewController", in: bundle)`
     static func homeAnchorViewController(_: Void = ()) -> UIKit.UINib {
@@ -779,9 +799,19 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.homeChildViewController)
     }
     
-    /// `UINib(name: "TestViewController", in: bundle)`
-    static func testViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.testViewController)
+    /// `UINib(name: "HomeEmoticonCollectionViewCell", in: bundle)`
+    static func homeEmoticonCollectionViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.homeEmoticonCollectionViewCell)
+    }
+    
+    /// `UINib(name: "HomeGiftCollectionViewCell", in: bundle)`
+    static func homeGiftCollectionViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.homeGiftCollectionViewCell)
+    }
+    
+    /// `UINib(name: "HomeShowGiftView", in: bundle)`
+    static func homeShowGiftView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.homeShowGiftView)
     }
     
     fileprivate init() {}
@@ -951,12 +981,34 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct _TestViewController: Rswift.NibResourceType {
+    struct _HomeEmoticonCollectionViewCell: Rswift.NibResourceType {
       let bundle = R.hostingBundle
-      let name = "TestViewController"
+      let name = "HomeEmoticonCollectionViewCell"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> HomeEmoticonCollectionViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomeEmoticonCollectionViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _HomeGiftCollectionViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "HomeGiftCollectionViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> HomeGiftCollectionViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomeGiftCollectionViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _HomeShowGiftView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "HomeShowGiftView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> HomeShowGiftView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomeShowGiftView
       }
       
       fileprivate init() {}

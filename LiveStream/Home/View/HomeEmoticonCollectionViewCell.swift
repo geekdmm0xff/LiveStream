@@ -9,7 +9,15 @@
 import UIKit
 
 class HomeEmoticonCollectionViewCell: UICollectionViewCell {
-
+    
+    @IBOutlet weak var iconImageView: UIImageView!
+    
+    var emoticon : Emoticon? {
+        didSet {
+            iconImageView.image = UIImage(named: emoticon!.name)
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

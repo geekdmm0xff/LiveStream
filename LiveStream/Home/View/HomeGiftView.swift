@@ -18,6 +18,10 @@ protocol HomeGiftViewDataSource: class {
     func gitView(_ gitView: HomeGiftView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
 }
 
+protocol HomeGiftViewDelegat: class {
+    func gitView(_ gitView: HomeGiftView, didSelectItemAt indexPath: IndexPath)
+}
+
 class HomeGiftView: UIView {
     
     private let titles: [String]
@@ -30,6 +34,7 @@ class HomeGiftView: UIView {
     private var titleView: HYTitleView!
     
     weak open var dataSource: HomeGiftViewDataSource?
+    weak open var delegate: HomeGiftViewDelegat?
     
     open func reginster(cellClass: AnyClass?, reuseIdentifer: String) {
         collectionView.register(cellClass, forCellWithReuseIdentifier: reuseIdentifer)
@@ -41,6 +46,10 @@ class HomeGiftView: UIView {
     
     open func dequeueReusableCell(reuseIdentifer: String, indexPath: IndexPath) -> UICollectionViewCell {
         return collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifer, for: indexPath)
+    }
+    
+    open func reload() {
+        collectionView.reloadData()
     }
     
     init(frame: CGRect, titles: [String], style: HYTitleStyle, layout: HomeGiftViewFlowLayout) {
@@ -71,17 +80,7 @@ extension HomeGiftView {
         let titleRect = CGRect(x: 0, y: titleY, width: Config.screenWidth, height: titleHeight)
         let titleView = HYTitleView(frame: titleRect, titles: titles, style: style)
         titleView.delegate = self
-        titleView.backgroundColor = UIColor.randomColor()
         addSubview(titleView)
-        
-        var pageY: CGFloat = collectionHeight + titleHeight
-        if style.theme == .emoticon {
-            pageY = collectionHeight
-        }
-        let pageRect = CGRect(x: 0, y: pageY, width: Config.screenWidth, height: pageHeight)
-        let pageControl = UIPageControl(frame: pageRect)
-        pageControl.backgroundColor = UIColor.randomColor()
-        addSubview(pageControl)
         
         var collectionY: CGFloat = titleHeight
         if style.theme == .emoticon {
@@ -94,6 +93,15 @@ extension HomeGiftView {
         collectionView.dataSource = self
         collectionView.delegate = self
         addSubview(collectionView)
+        
+        var pageY: CGFloat = collectionHeight + titleHeight
+        if style.theme == .emoticon {
+            pageY = collectionHeight
+        }
+        let pageRect = CGRect(x: 0, y: pageY, width: Config.screenWidth, height: pageHeight)
+        let pageControl = UIPageControl(frame: pageRect)
+        pageControl.backgroundColor = collectionView.backgroundColor
+        addSubview(pageControl)
         
         self.titleView = titleView
         self.pageControl = pageControl
@@ -130,6 +138,10 @@ extension HomeGiftView: UICollectionViewDataSource {
 }
 
 extension HomeGiftView: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.gitView(self, didSelectItemAt: indexPath)
+    }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         scrollViewDidEnd()

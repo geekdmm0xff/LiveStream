@@ -38,10 +38,8 @@ class HomeChildViewController: UIViewController {
 extension HomeChildViewController {
     
     func loadData() {
-        Networking.fetchHomeData(item: type, index: 0) {[weak self] (feeds) in
-            guard let feeds = feeds else {
-                return
-            }
+        let r = HomeListRequest(item: type, index: 48)
+        ReqeustNetWorking<HomeList>.sendRequest(r) {[weak self] (feeds) in
             if feeds.status == 200 {
                 self?.anchors = feeds.anchors
                 self?.collectionView.reloadData()

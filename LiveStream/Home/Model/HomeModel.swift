@@ -29,7 +29,6 @@ struct HomeAnchor: Codable {
     var pic74: URL
     var picWebp: URL
     var live: Int
-    var push: Int
     var focus: Int
     var charge: Int
     var mic: Int
@@ -92,5 +91,101 @@ struct HomeList: Codable {
     
     func encode(to encoder: Encoder) throws {
         
+    }
+}
+
+// MARK:- 礼物
+struct GiftItem: Codable {
+    let img2: URL
+    let subject: String
+    let coin: Int
+}
+
+struct GiftType: Codable {
+    let type: String
+    let t: Int
+    let list: [GiftItem]
+}
+
+struct GiftMessage: Codable {
+    var types: [GiftType] = []
+    
+    struct GiftTypeInfo: CodingKey { // 不定key
+        var stringValue: String
+        var intValue: Int? { return nil }
+        
+        init?(stringValue: String) {
+            self.stringValue = stringValue
+        }
+        init?(intValue: Int) {
+            return nil
+        }
+        static let list = GiftTypeInfo(stringValue: "list")!
+        static let t = GiftTypeInfo(stringValue: "t")!
+    }
+  
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: GiftTypeInfo.self)
+        
+        var v = [GiftType]()
+        try container.allKeys.forEach {
+            let inner = try container.nestedContainer(keyedBy: GiftTypeInfo.self, forKey: $0)
+            let t = try inner.decode(Int.self, forKey: .t)
+            
+            var unkeyContainer = try inner.nestedUnkeyedContainer(forKey: .list)
+            var gifts: [GiftItem] = []
+            while !unkeyContainer.isAtEnd {
+                let gift = try unkeyContainer.decode(GiftItem.self)
+                gifts.append(gift)
+            }
+            if (!gifts.isEmpty) {
+                let e = GiftType(type: $0.stringValue, t:t, list: gifts)
+                v.append(e)
+            }
+        }
+        
+        //
+        self.types = v.sorted { $0.t > $1.t }
+    }
+}
+
+struct GiftPackage: Codable {
+    let status: Int
+    let message: GiftMessage
+}
+
+// MARK:- 表情包相关
+
+struct Emoticon {
+    var name: String
+}
+
+struct Emoticons {
+    lazy var emoticons: [Emoticon] = []
+    
+    init(arr: NSArray) {
+        guard let arr = arr as? [String] else {
+            return
+        }
+        arr.forEach {
+            emoticons.append(Emoticon(name: $0))
+        }
+    }
+}
+
+class EmoticonPackage {
+    static let shared: EmoticonPackage = EmoticonPackage()
+    lazy var emoticons: [Emoticons] = []
+    
+    private init() {
+        if let normal = R.file.qhNormalEmotionSortPlist(),
+            let normals = NSArray(contentsOf: normal) {
+            emoticons.append(Emoticons(arr: normals))
+        }
+        
+        if let gift = R.file.qhSohuGifSortPlist(),
+            let gifts = NSArray(contentsOf: gift) {
+            emoticons.append(Emoticons(arr: gifts))
+        }
     }
 }
